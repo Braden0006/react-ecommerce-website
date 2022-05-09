@@ -1,0 +1,7 @@
+.navbar-container {
+    display: flex;
+    font-size: 3rem;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+}

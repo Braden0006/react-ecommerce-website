@@ -1,0 +1,13 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.app-container {
+  background-image: url('/src/images/pexels-alan-ferreira-1868870.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}

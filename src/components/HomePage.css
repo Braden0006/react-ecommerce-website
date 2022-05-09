@@ -1,0 +1,28 @@
+.homepage-container {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage_title {
+    color: white;
+    font-size: 1.6rem;
+    padding: 0.4rem;
+    font-weight: 700;
+}
+
+.homepage_button {
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    background: white;
+    border: none;
+    border-radius: 1.4rem;
+}
