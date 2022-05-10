@@ -1,0 +1,10 @@
+.information-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information_title {
+    padding: 1rem 0rem 1rem 0rem;
+}
