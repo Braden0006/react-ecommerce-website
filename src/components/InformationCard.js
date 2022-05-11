@@ -36,7 +36,7 @@ export default function InformationCard() {
         <GiHealingShield className="information-card_icon" />
         <span className="information-card_title">Help with Healing</span>
         <p className="information-card_para">
-          Agave and Aloe Vera succulents can be used reduce inflammation, treat cuts and burns, and speed up wound healin
+          Agave and Aloe Vera succulents can be used to reduce inflammation, treat cuts and burns, and speed up wound healin
         </p>
       </div>
     </>

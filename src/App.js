@@ -1,8 +1,9 @@
 import React from 'react';
+import './App.css';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import Information from './components/Information';
-import './App.css';
+import ProductPage from './components/ProductPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <HomePage />
       </div>
       <Information />
+      <ProductPage />
     </div>
   )
 }

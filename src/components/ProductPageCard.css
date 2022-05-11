@@ -1,0 +1,48 @@
+.productcard-container {
+  height: 75vh;
+  width: 80vw;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 2rem -1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.product_title_container {
+  height: 6vh;
+  display: flex;
+  padding: 2rem 4rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.productcard_img_container, .jade_plant {
+  width: 73%;
+  height: 60%;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background: url("/src/images/small-jade-plant.jpg") center center;
+  background-size: cover;
+}
+
+.aloe_vera {
+    background: url('/src/images/large-aloevera.jpg') center center;
+    background-size: cover;
+}
+
+.productcard_info {
+    line-height: 2.2rem;
+}
+
+.productcard_info_container {
+  padding: 0rem 4rem 0rem 4rem;
+}
+
+.productcard_button {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: none;
+}
