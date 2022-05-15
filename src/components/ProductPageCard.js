@@ -21,7 +21,7 @@ export default function ProductPageCard() {
           </div>
           <div className="productcard_img_container aloe_vera"></div>
           <div className='productcard_info_container'>
-            <p className='productcard_info'>Aloe Vera is one of the most popular succulent plants</p>
+            <p className='productcard_info'>Aloe Vera is one of the most popular succulent plants. This plant originated in the Arabian peninsula. You can use the compounds in the leaf to ease scrapes and burns</p>
           </div>
           <button className='productcard_button'>Add to cart</button>
       </div>
