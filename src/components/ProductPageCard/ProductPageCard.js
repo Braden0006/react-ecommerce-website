@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import AddedToCart from "../AddedToCart/AddedToCart";
 import "./ProductPageCard.css";
@@ -8,6 +8,12 @@ export default function ProductPageCard() {
 
   // The state for rather or not the "AddedToCart" modal pops up when "Add to cart" is clicked
   const [isOpen, setIsOpen] = useState(false);
+
+  if (isOpen) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'scroll'
+  }
 
   return (
     <>
@@ -24,7 +30,15 @@ export default function ProductPageCard() {
             containers and like warm, dry climated often found in most homes{" "}
           </p>
         </div>
-        <button className="productcard_button">Add to cart</button>
+        <button
+          className="productcard_button"
+          onClick={() => {
+            setAddItem(addItem + 1);
+            setIsOpen(true);
+          }}
+        >
+          Add to cart
+        </button>
       </div>
 
       <div className="productcard-container">
@@ -39,7 +53,15 @@ export default function ProductPageCard() {
             the leaf to ease scrapes and burns
           </p>
         </div>
-        <button className="productcard_button">Add to cart</button>
+        <button
+          className="productcard_button"
+          onClick={() => {
+            setAddItem(addItem + 1);
+            setIsOpen(true);
+          }}
+        >
+          Add to cart
+        </button>
       </div>
     </>
   );
