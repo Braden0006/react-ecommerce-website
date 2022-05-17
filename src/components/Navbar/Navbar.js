@@ -32,7 +32,10 @@ export default function Navbar() {
       <div className="navbar-container">
         <div className="hamburger_container">
           <GiHamburgerMenu
+            // if the "showMenu" state is true than the hidden class is applied
             className={showMenu ? "hidden" : null}
+
+            // Toggles the "showMenu" state to true or false when the hamburger icon is clicked
             onClick={() => setShowMenu(!showMenu)}
           />
         </div>

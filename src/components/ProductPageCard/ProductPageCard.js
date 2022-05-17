@@ -9,6 +9,7 @@ export default function ProductPageCard() {
   // The state for rather or not the "AddedToCart" modal pops up when "Add to cart" is clicked
   const [isOpen, setIsOpen] = useState(false);
 
+  // When the modal is shown, the page behind it isn't scrollable, but when the modal is not shown it is scrollable
   if (isOpen) {
     document.body.style.overflow = 'hidden'
   } else {
@@ -32,6 +33,7 @@ export default function ProductPageCard() {
         </div>
         <button
           className="productcard_button"
+          // When the button is clicked, it increments the number next to then cart icon
           onClick={() => {
             setAddItem(addItem + 1);
             setIsOpen(true);
@@ -55,6 +57,7 @@ export default function ProductPageCard() {
         </div>
         <button
           className="productcard_button"
+          // When the button is clicked, it increments the number next to then cart icon
           onClick={() => {
             setAddItem(addItem + 1);
             setIsOpen(true);
