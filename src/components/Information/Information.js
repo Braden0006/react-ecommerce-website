@@ -1,5 +1,5 @@
 import React from 'react'
-import InformationCard from './InformationCard'
+import InformationCard from '../InformationCard/InformationCard'
 import './Information.css'
 
 export default function Information() {

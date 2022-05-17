@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProductPage.css'
-import ProductPageCard from './ProductPageCard'
+import ProductPageCard from '../ProductPageCard/ProductPageCard'
 
 export default function ProductPage() {
   return (
