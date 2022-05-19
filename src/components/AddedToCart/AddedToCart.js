@@ -11,7 +11,7 @@ export default function AddedToCart({ open, onClose, children }) {
     <div className="addedtocart-background">
       <div className="addedtocart-container">
         <span className="cart_title">Added to Cart!</span>
-        <div class="button-container">
+        <div className="button-container">
           <button className="cart_button">View Cart</button>
           <button className="cart_button" onClick={onClose}>
             Close

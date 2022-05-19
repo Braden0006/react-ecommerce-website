@@ -18,22 +18,25 @@
   width: 100%;
 }
 
-.productcard_img_container, .jade_plant {
+.productcard_img_container {
   width: 73%;
   height: 60%;
   margin-top: 2rem;
   border-radius: 1rem;
-  background: url("/src/images/small-jade-plant.jpg") center center;
+}
+
+.jade_plant {
+  background: url("/src/images/large-jade-plant.jpg") center center;
   background-size: cover;
 }
 
 .aloe_vera {
-    background: url('/src/images/large-aloevera.jpg') center center;
-    background-size: cover;
+  background: url("/src/images/large-aloevera.jpg") center center;
+  background-size: cover;
 }
 
 .productcard_info {
-    line-height: 2.2rem;
+  line-height: 2.2rem;
 }
 
 .productcard_info_container {

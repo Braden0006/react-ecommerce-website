@@ -11,61 +11,57 @@ export default function ProductPageCard() {
 
   // When the modal is shown, the page behind it isn't scrollable, but when the modal is not shown it is scrollable
   if (isOpen) {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = 'scroll'
+    document.body.style.overflow = "scroll";
   }
+
+  const plants = [
+    {
+      id: 1,
+      name: "Jade Plant",
+      description: `The Jade Plant was originated in South Africa, but has been
+    cultivated in America and Europe as a house plant. The grow good in
+    containers and like warm, dry climated often found in most homes`,
+      price: 16.99,
+    },
+    {
+      id: 2,
+      name: "Aloe Vera",
+      description: `Aloe Vera is one of the most popular succulent plants. This plant
+      originated in the Arabian peninsula. You can use the compounds in
+      the leaf to ease scrapes and burns`,
+      price: 19.99,
+    },
+  ];
 
   return (
     <>
       <AddedToCart open={isOpen} onClose={() => setIsOpen(false)} />
-      <div className="productcard-container">
-        <div className="product_title_container">
-          <span>Jade Plant</span>
-        </div>
-        <div className="productcard_img_container jade_plant"></div>
-        <div className="productcard_info_container">
-          <p className="productcard_info">
-            The Jade Plant was originated in South Africa, but has been
-            cultivated in America and Europe as a house plant. The grow good in
-            containers and like warm, dry climated often found in most homes{" "}
-          </p>
-        </div>
-        <button
-          className="productcard_button"
-          // When the button is clicked, it increments the number next to then cart icon
-          onClick={() => {
-            setAddItem(addItem + 1);
-            setIsOpen(true);
-          }}
-        >
-          Add to cart
-        </button>
-      </div>
 
-      <div className="productcard-container">
-        <div className="product_title_container">
-          <span>Aloe Vera</span>
+      {plants.map((plant) => (
+        <div className="productcard-container">
+          <div className="product_title_container">
+            <span>{plant.name}</span>
+          </div>
+          <div className={`productcard_img_container ${plant.name === 'Jade Plant' ? 'jade_plant' : 'aloe_vera'}`}></div>
+          <div className="productcard_info_container">
+            <p className="productcard_info">
+              {plant.description}
+            </p>
+          </div>
+          <button
+            className="productcard_button"
+            // When the button is clicked, it increments the number next to then cart icon
+            onClick={() => {
+              setAddItem(addItem + 1);
+              setIsOpen(true);
+            }}
+          >
+            Add to cart
+          </button>
         </div>
-        <div className="productcard_img_container aloe_vera"></div>
-        <div className="productcard_info_container">
-          <p className="productcard_info">
-            Aloe Vera is one of the most popular succulent plants. This plant
-            originated in the Arabian peninsula. You can use the compounds in
-            the leaf to ease scrapes and burns
-          </p>
-        </div>
-        <button
-          className="productcard_button"
-          // When the button is clicked, it increments the number next to then cart icon
-          onClick={() => {
-            setAddItem(addItem + 1);
-            setIsOpen(true);
-          }}
-        >
-          Add to cart
-        </button>
-      </div>
+      ))}
     </>
   );
 }
