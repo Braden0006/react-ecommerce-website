@@ -1,6 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
+import { useCart } from "react-use-cart";
 import AddedToCart from "../AddedToCart/AddedToCart";
+import { Routes, Route } from "react-router-dom";
+import ViewCart from "../ViewCart/ViewCart";
 import "./ProductPageCard.css";
 
 export default function ProductPageCard() {
@@ -16,6 +19,9 @@ export default function ProductPageCard() {
     document.body.style.overflow = "scroll";
   }
 
+  // const { addPlant } = useCart()
+
+  // Array of objectc with the plants to map over and make the cards with
   const plants = [
     {
       id: 1,
@@ -40,15 +46,17 @@ export default function ProductPageCard() {
       <AddedToCart open={isOpen} onClose={() => setIsOpen(false)} />
 
       {plants.map((plant) => (
-        <div className="productcard-container">
+        <div className="productcard-container" key={plant.id}>
           <div className="product_title_container">
             <span>{plant.name}</span>
           </div>
-          <div className={`productcard_img_container ${plant.name === 'Jade Plant' ? 'jade_plant' : 'aloe_vera'}`}></div>
+          <div
+            className={`productcard_img_container ${
+              plant.name === "Jade Plant" ? "jade_plant" : "aloe_vera"
+            }`}
+          ></div>
           <div className="productcard_info_container">
-            <p className="productcard_info">
-              {plant.description}
-            </p>
+            <p className="productcard_info">{plant.description}</p>
           </div>
           <button
             className="productcard_button"
@@ -56,12 +64,16 @@ export default function ProductPageCard() {
             onClick={() => {
               setAddItem(addItem + 1);
               setIsOpen(true);
+              // addPlant(plant)
             }}
           >
             Add to cart
           </button>
         </div>
       ))}
+      {/* <Routes>
+        <Route path="/viewcart" element={<ViewCart />} />
+      </Routes> */}
     </>
   );
 }

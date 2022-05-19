@@ -1,34 +1,39 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/HomePage/HomePage";
 import Information from "./components/Information/Information";
 import ProductPage from "./components/ProductPage/ProductPage";
+import { Routes, Route } from "react-router-dom";
+import ViewCart from "./components/ViewCart/ViewCart";
 import { CartContext } from "./context/CartContext";
+import { CartProvider } from "react-use-cart";
 
 function App() {
-  const [addItem, setAddItem] = useState(0)
+  const [addItem, setAddItem] = useState(0);
 
   return (
     <>
-      {/* Wrapped the whole app component in the 'Router' tag so that the hamburger menu links can route to certain parts of the page */}
-      <Router>
-        <div className="app-container">
-          <CartContext.Provider value={{addItem, setAddItem}} >
-            <div className="homepage">
-              <Navbar />
-              <HomePage />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="app-container">
+              <CartContext.Provider value={{ addItem, setAddItem }}>
+                <div className="homepage">
+                  <Navbar />
+                  <HomePage />
+                </div>
+                <Information />
+                <CartProvider>
+                  <ProductPage />
+                </CartProvider>
+              </CartContext.Provider>
             </div>
-            <Information />
-            <ProductPage />
-          </CartContext.Provider>
-        </div>
-      </Router>
+          }
+        />
+        <Route path="/viewcart/*" element={<ViewCart />} />
+      </Routes>
     </>
   );
 }

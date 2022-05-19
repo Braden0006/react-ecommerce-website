@@ -12,6 +12,7 @@ export default function ({open, menu}) {
       />
       <ul className="navbarlink_list">
         <li className="navbarlink_link">
+          {/* Used to "Link" tag with the HashLink to it routes to these certain parts of the page */}
           <Link to="#about" smooth onClick={menu}>About</Link>
         </li>
         <li className="navbarlink_link">
