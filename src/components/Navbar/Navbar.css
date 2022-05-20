@@ -4,6 +4,10 @@ a {
     font-weight: 600;
 }
 
+.carticon_link {
+    height: 3rem;
+}
+
 .navbar-container {
     display: flex;
     font-size: 3rem;
