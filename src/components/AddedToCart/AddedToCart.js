@@ -4,6 +4,7 @@ import "./AddedToCart.css";
 import { Routes, Route, Link } from "react-router-dom";
 
 export default function AddedToCart({ open, onClose }) {
+  
   // If "open" is false, than the modal is not shown, if it's true then it is shown
   if (!open) return null;
 

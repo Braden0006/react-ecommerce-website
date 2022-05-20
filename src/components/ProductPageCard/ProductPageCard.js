@@ -71,9 +71,6 @@ export default function ProductPageCard() {
           </button>
         </div>
       ))}
-      {/* <Routes>
-        <Route path="/viewcart" element={<ViewCart />} />
-      </Routes> */}
     </>
   );
 }
