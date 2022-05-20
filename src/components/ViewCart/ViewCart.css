@@ -42,3 +42,14 @@
   font-size: 1.6rem;
   padding-bottom: 1rem;
 }
+
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.empty_title {
+  font-size: 2rem;
+}

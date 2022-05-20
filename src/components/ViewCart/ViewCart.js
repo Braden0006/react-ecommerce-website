@@ -4,7 +4,6 @@ import { useCart } from "react-use-cart";
 import "./ViewCart.css";
 
 export default function () {
-
   const {
     isEmpty,
     emptyCart,
@@ -15,6 +14,20 @@ export default function () {
     totalItems,
     cartTotal,
   } = useCart();
+
+  if (isEmpty)
+    return (
+      <>
+        <div className="viewcart-goback-btn">
+          <Link to="/">
+            <button>Go Back</button>
+          </Link>
+        </div>
+        <div className="empty-container">
+          <h2 className="empty_title">Your cart is empty...</h2>
+        </div>
+      </>
+    );
 
   return (
     <>
@@ -28,9 +41,13 @@ export default function () {
 
         {/* Maps over the items object, which was created by the "useCart" API by adding the plant object with the "useCart" when I looped over them to create the cards in the "ProductPageCard" page */}
         {items.map((item) => (
-          <div className='item-container' key={item.id}>
+          <div className="item-container" key={item.id}>
             <h4 className="viewcart_item">{item.name}</h4>
-            <span className={`img_container ${item.id === 1 ? 'jade_plant' : 'aloe_vera'}`}></span>
+            <span
+              className={`img_container ${
+                item.id === 1 ? "jade_plant" : "aloe_vera"
+              }`}
+            ></span>
             <div className="button_container">
               <button
                 className="viewcart_increment"
