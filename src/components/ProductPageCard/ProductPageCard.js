@@ -1,8 +1,6 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import AddedToCart from "../AddedToCart/AddedToCart";
-import { Routes, Route } from "react-router-dom";
-import ViewCart from "../ViewCart/ViewCart";
 import { useCart } from "react-use-cart";
 import "./ProductPageCard.css";
 

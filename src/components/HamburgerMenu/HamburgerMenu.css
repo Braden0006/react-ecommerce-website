@@ -24,7 +24,3 @@
     transition: 0.7s;
     top: 0;
 }
-
-.hide {
-    transform: translateX(-44rem);
-}
