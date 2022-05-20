@@ -3,12 +3,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import "./Navbar.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { CartContext } from '../../context/CartContext'
+import { useCart } from "react-use-cart";
 
 export default function Navbar() {
 
   // This allows us to get the state variable in the App component using the context API
-  const { addItem } = useContext(CartContext)
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -24,8 +23,13 @@ export default function Navbar() {
 
   // Checks to see if theres an item added to the cart and rather or not to display the number, so if there's nothing added it doesn't display anything next to the cart icon
   const isNumberShown = () => {
-    return addItem === 0 ? 'hidden' : null
+    return totalUniqueItems === 0 ? 'hidden' : null
   }
+
+  // put the "totalUniqueItems" in a variable with the "useCart" API to display how many different items are in the cart next to the cart icon
+  const {
+    totalUniqueItems,
+  } = useCart()
 
   return (
     <>
@@ -41,7 +45,7 @@ export default function Navbar() {
         </div>
         <div className="navbarcart_container">
           <AiOutlineShoppingCart />
-          <span className={`number ${isNumberShown()}`}>{addItem}</span>
+          <span className={`number ${isNumberShown()}`}>{totalUniqueItems}</span>
         </div>
       </div>
       <HamburgerMenu open={open} menu={menu} />

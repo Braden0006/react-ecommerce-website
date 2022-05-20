@@ -31,7 +31,7 @@
 }
 
 .aloe_vera {
-  background: url("/src/images/large-aloevera.jpg") center center;
+  background: url("/src/images/large-aloevera.jpg") center 30%;
   background-size: cover;
 }
 

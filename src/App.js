@@ -10,30 +10,31 @@ import { CartContext } from "./context/CartContext";
 import { CartProvider } from "react-use-cart";
 
 function App() {
-  const [addItem, setAddItem] = useState(0);
+  const [addPlant, setAddPlant] = useState(0);
 
   return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="app-container">
-              <CartContext.Provider value={{ addItem, setAddItem }}>
-                <div className="homepage">
-                  <Navbar />
-                  <HomePage />
-                </div>
-                <Information />
-                <CartProvider>
+      <CartProvider>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="app-container">
+                {/* "CartContext.Provider" is used to avoid prop drilling, so any component that are inside those tags can utilize the "addPlant" state */}
+                <CartContext.Provider value={{ addPlant, setAddPlant }}>
+                  <div className="homepage">
+                    <Navbar />
+                    <HomePage />
+                  </div>
+                  <Information />
                   <ProductPage />
-                </CartProvider>
-              </CartContext.Provider>
-            </div>
-          }
-        />
-        <Route path="/viewcart/*" element={<ViewCart />} />
-      </Routes>
+                </CartContext.Provider>
+              </div>
+            }
+          />
+          <Route path="/viewcart/*" element={<ViewCart />} />
+        </Routes>
+      </CartProvider>
     </>
   );
 }

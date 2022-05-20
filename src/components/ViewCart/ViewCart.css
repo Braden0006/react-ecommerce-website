@@ -16,8 +16,15 @@
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  height: 16rem;
+  height: 35vh;
   box-shadow: 0rem 0rem 2rem -1rem;
+  margin: 1rem;
+}
+
+.img_container {
+  height: 18vh;
+  border-radius: 1rem;
+  width: 45vw;
 }
 
 .button_container {
@@ -29,4 +36,9 @@
 
 .viewcart-goback-btn {
   padding: 1rem;
+}
+
+.cart-total {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
 }

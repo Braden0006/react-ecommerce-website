@@ -1,13 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
-import { useCart } from "react-use-cart";
 import AddedToCart from "../AddedToCart/AddedToCart";
 import { Routes, Route } from "react-router-dom";
 import ViewCart from "../ViewCart/ViewCart";
+import { useCart } from "react-use-cart";
 import "./ProductPageCard.css";
 
 export default function ProductPageCard() {
-  const { addItem, setAddItem } = useContext(CartContext);
+  const { addPlant, setAddPlant } = useContext(CartContext);
 
   // The state for rather or not the "AddedToCart" modal pops up when "Add to cart" is clicked
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +19,9 @@ export default function ProductPageCard() {
     document.body.style.overflow = "scroll";
   }
 
-  // const { addPlant } = useCart()
+  const { addItem } = useCart()
 
-  // Array of objectc with the plants to map over and make the cards with
+  // Array of objects with the plants to map over and make the cards with
   const plants = [
     {
       id: 1,
@@ -62,9 +62,9 @@ export default function ProductPageCard() {
             className="productcard_button"
             // When the button is clicked, it increments the number next to then cart icon
             onClick={() => {
-              setAddItem(addItem + 1);
+              setAddPlant(addPlant + 1);
               setIsOpen(true);
-              // addPlant(plant)
+              addItem(plant)
             }}
           >
             Add to cart
