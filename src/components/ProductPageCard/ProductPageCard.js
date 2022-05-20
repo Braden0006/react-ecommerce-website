@@ -19,6 +19,7 @@ export default function ProductPageCard() {
     document.body.style.overflow = "scroll";
   }
 
+  // This variable function is set to the onClick of the "Add Cart" button so it adds the object of the plant to the "useCart" api
   const { addItem } = useCart()
 
   // Array of objects with the plants to map over and make the cards with

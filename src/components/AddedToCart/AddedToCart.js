@@ -19,7 +19,7 @@ export default function AddedToCart({ open, onClose }) {
             </button>
           </Link>
           <button className="cart_button" onClick={onClose}>
-            Close
+            Continue Shopping
           </button>
         </div>
       </div>

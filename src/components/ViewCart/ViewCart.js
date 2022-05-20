@@ -4,6 +4,8 @@ import { useCart } from "react-use-cart";
 import "./ViewCart.css";
 
 export default function () {
+
+  // the variables from the "useCart" api to add functionality for all the items and the cart
   const {
     isEmpty,
     emptyCart,
@@ -15,6 +17,7 @@ export default function () {
     cartTotal,
   } = useCart();
 
+  // if the cart is empty than this will be display...
   if (isEmpty)
     return (
       <>
