@@ -1,14 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import "./Navbar.css";
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
-  // This allows us to get the state variable in the App component using the context API
-
   const [showMenu, setShowMenu] = useState(false);
 
   // Sets the "showMenu" value to toggle between true and false
@@ -23,11 +21,11 @@ export default function Navbar() {
 
   const hide = () => {
     if (!showMenu) {
-      return 'hidden'
+      return "hidden";
     } else {
-      return ''
+      return "";
     }
-  }
+  };
 
   // put the "totalUniqueItems" in a variable with the "useCart" API to display how many different items are in the cart next to the cart icon
   const { totalUniqueItems } = useCart();
@@ -43,6 +41,9 @@ export default function Navbar() {
             onClick={() => menu()}
           />
         </div>
+
+        <HamburgerMenu menu={menu} hide={hide} menuShown={showMenu} />
+
         <div className="navbarcart_container">
           <Link className="carticon_link" to="/viewcart/*">
             <AiOutlineShoppingCart />
@@ -52,7 +53,6 @@ export default function Navbar() {
           </span>
         </div>
       </div>
-      <HamburgerMenu menu={menu} hide={hide} />
     </>
   );
 }

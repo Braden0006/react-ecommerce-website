@@ -1,36 +1,37 @@
 a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 }
 
 .carticon_link {
-    height: 3rem;
+  height: 3rem;
 }
 
 .navbar-container {
-    display: flex;
-    font-size: 3rem;
-    justify-content: space-between;
-    padding: 2rem;
-    color: white;
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-between;
+  padding: 2rem;
+  color: white;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.navbarcart_container, .hamburger_container {
-    display: flex;
-    align-items: center;
+.navbarcart_container,
+.hamburger_container {
+  display: flex;
+  align-items: center;
 }
 
 .number {
-    border: 1px solid white;
-    font-size: 1.5rem;
-    border-radius: 57%;
-    padding: 0.2rem 0.8rem 0.2rem 0.8rem;
-    margin-left: 0.5rem;
-    color: black;
-    background-color: white;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  border-radius: 57%;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  margin-left: 0.5rem;
+  color: black;
+  background-color: white;
 }

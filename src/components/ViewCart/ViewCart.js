@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import "./ViewCart.css";
 
-export default function () {
+export default function ViewCart() {
 
   // the variables from the "useCart" api to add functionality for all the items and the cart
   const {
     isEmpty,
     emptyCart,
-    totalUniqueItems,
     items,
     updateItemQuantity,
-    removeItem,
     totalItems,
     cartTotal,
   } = useCart();
