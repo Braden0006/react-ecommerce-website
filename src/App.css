@@ -7,6 +7,6 @@ html {
 }
 
 .homepage {
-  background-image: url('/src/images/pexels-alan-ferreira-1868870.jpg');
+  background-image: url('./images/pexels-julia-sakelli-1011302.jpg');
   background-size: cover;
 }

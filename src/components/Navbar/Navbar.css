@@ -35,3 +35,10 @@ a {
   color: black;
   background-color: white;
 }
+
+/* Media Query */
+@media screen and (min-width: 1024px) {
+  .hamburger_container {
+    display: none;
+  }
+}

@@ -26,19 +26,25 @@
   left: 0
 }
 
-/* Transitions */
+/* Media Query */
+@media screen and (min-width: 1024px) {
+  .navbarlink-container {
+    height: auto;
+    width: auto;
+    background: none;
+    transform: none !important;
+    position: static;
+  }
 
-.my-node-enter {
-  opacity: 0;
-}
-.my-node-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-.my-node-exit {
-  opacity: 1;
-}
-.my-node-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
+  .navbarlink_list {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    height: auto;
+    padding: 0;
+  }
+
+  .x-icon_container {
+    display: none;
+  }
 }

@@ -13,7 +13,7 @@ export default function HamburgerMenu({ menu, menuShown }) {
       exit={{ x: -1000 }}
       transition={{ duration: 0.01 }}
     >
-      <div>
+      <div className="x-icon_container">
         <AiOutlineClose className="x-icon" onClick={menu} />
       </div>
       <ul className="navbarlink_list">
