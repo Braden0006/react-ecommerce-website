@@ -32,6 +32,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 1.5rem;
+  align-items: center;
 }
 
 .viewcart-goback-btn {
@@ -53,6 +54,28 @@
 
 .empty_title {
   font-size: 2rem;
+}
+
+.viewcart-back {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.viewcart_increment,
+.viewcart_decrement {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.remove-item_btn {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: none;
 }
 
 /* Media Querys */

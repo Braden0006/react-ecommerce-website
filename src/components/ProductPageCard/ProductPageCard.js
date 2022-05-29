@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
-import { CartContext } from "../../context/CartContext";
 import AddedToCart from "../AddedToCart/AddedToCart";
+import { CartContext } from "../../context/CartContext";
 import { useCart } from "react-use-cart";
+import { motion } from "framer-motion";
 import "./ProductPageCard.css";
 
 export default function ProductPageCard() {
@@ -18,7 +19,7 @@ export default function ProductPageCard() {
   }
 
   // This variable function is set to the onClick of the "Add Cart" button so it adds the object of the plant to the "useCart" api
-  const { addItem } = useCart()
+  const { addItem } = useCart();
 
   // Array of objects with the plants to map over and make the cards with
   const plants = [
@@ -57,17 +58,19 @@ export default function ProductPageCard() {
           <div className="productcard_info_container">
             <p className="productcard_info">{plant.description}</p>
           </div>
-          <button
+          <motion.button
             className="productcard_button"
             // When the button is clicked, it increments the number next to then cart icon
             onClick={() => {
               setAddPlant(addPlant + 1);
               setIsOpen(true);
-              addItem(plant)
+              addItem(plant);
             }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             Add to cart
-          </button>
+          </motion.button>
         </div>
       ))}
     </>

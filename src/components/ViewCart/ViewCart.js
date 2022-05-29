@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import { motion } from "framer-motion";
 import "./ViewCart.css";
 
 export default function ViewCart() {
-
   // the variables from the "useCart" api to add functionality for all the items and the cart
   const {
     isEmpty,
@@ -21,7 +21,13 @@ export default function ViewCart() {
       <>
         <div className="viewcart-goback-btn">
           <Link to="/">
-            <button>Go Back</button>
+            <motion.button
+              className="viewcart-back"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Go Back
+            </motion.button>
           </Link>
         </div>
         <div className="empty-container">
@@ -32,9 +38,15 @@ export default function ViewCart() {
 
   return (
     <>
-      <div className="viewcart-goback-btn">
+      <div className="viewcart-back-btn">
         <Link to="/">
-          <button>Go Back</button>
+          <motion.button
+            className="viewcart-back"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Go Back
+          </motion.button>
         </Link>
       </div>
       <div className="viewcart-container">
@@ -69,7 +81,9 @@ export default function ViewCart() {
           ))}
         </div>
         <span className="cart-total">Total: ${cartTotal.toFixed(2)}</span>
-        <button className="remove-item_btn" onClick={() => emptyCart()}>Remove All Items</button>
+        <button className="remove-item_btn" onClick={() => emptyCart()}>
+          Remove All Items
+        </button>
       </div>
     </>
   );
