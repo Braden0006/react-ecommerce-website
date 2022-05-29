@@ -41,4 +41,13 @@ a {
   .hamburger_container {
     display: none;
   }
+
+  .navbarcart_container {
+    font-size: 4.5rem;
+    padding-right: 2rem;
+  }
+
+  .number {
+    margin-top: 1rem;
+  }
 }

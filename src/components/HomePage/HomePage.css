@@ -26,3 +26,20 @@
     border: none;
     border-radius: 1.4rem;
 }
+
+/* Media Query */
+@media screen and (min-width: 1024px) {
+    .homepage_title {
+        font-size: 2.4rem;
+    }
+
+    .homepage_button {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    .homepage_title_button {
+        margin-bottom: 16rem;
+        text-align: center;
+    }
+}

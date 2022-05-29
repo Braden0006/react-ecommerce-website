@@ -22,7 +22,7 @@
 }
 
 .img_container {
-  height: 18vh;
+  height: 50%;
   border-radius: 1rem;
   width: 45vw;
 }
@@ -53,4 +53,19 @@
 
 .empty_title {
   font-size: 2rem;
+}
+
+/* Media Querys */
+@media screen and (min-width: 1024px) {
+  .item-container {
+    height: 40vh;
+  }
+
+  .cart-total {
+    font-size: 1.6rem;
+  }
+
+  .remove-item_btn {
+    font-size: 1.4rem;
+  }
 }

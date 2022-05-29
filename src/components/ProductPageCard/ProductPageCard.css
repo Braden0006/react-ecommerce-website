@@ -49,3 +49,15 @@
   border-radius: 1rem;
   border: none;
 }
+
+/* Media Querys */
+@media screen and (min-width: 1024px) {
+  .productcard-container {
+    font-size: 2rem;
+    height: 100vh;
+  }
+
+  .productcard_button {
+    font-size: 1.6rem;
+  }
+}

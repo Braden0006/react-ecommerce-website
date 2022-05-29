@@ -37,3 +37,14 @@
     border: 0;
     cursor: pointer;
 }
+
+/* Media Querys */
+@media screen and (min-width: 1024px) {
+  .cart_button {
+    font-size: 1.6rem;
+  }
+
+  .cart_title {
+    font-size: 2rem;
+  }
+}

@@ -12,3 +12,10 @@
     font-size: 2rem;
     padding: 2rem;
 }
+
+/* Media querys */
+@media screen and (min-width: 1024px) {
+    .product_title {
+        font-size: 2.6rem;
+    }
+}
