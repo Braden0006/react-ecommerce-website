@@ -1,13 +1,42 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./HomePage.css";
 
 export default function HomePage() {
+
+  const {ref, inView} = useInView({
+    threshold: 0.2
+  })
+
+  const fade = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      fade.start({
+        opacity: 1,
+        transition: {
+          duration: 0.8
+        }
+      })
+    }
+
+    if (!inView) {
+      fade.start({
+        opacity: 0,
+        transition: {
+          duration: 0.8
+        }
+      })
+    }
+  }, [fade, inView])
+
   return (
     <>
-      <div className="homepage-container">
-        <div className="homepage_title_button">
+      <div className="homepage-container" ref={ref}>
+        <motion.div className="homepage_title_button" animate={fade}>
           <div className="homepage-title-container">
             <span className="homepage_title">
               Succulents from around the globe
@@ -23,7 +52,7 @@ export default function HomePage() {
               Shop Now
             </motion.button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -1,45 +1,52 @@
 .homepage-container {
-    height: 95vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .homepage-title-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .homepage_title {
-    color: white;
-    font-size: 1.6rem;
-    padding: 0.4rem;
-    font-weight: 700;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.4rem;
+  font-weight: 700;
+}
+
+.homepage_title_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .homepage_button {
-    padding: 0.8rem 1rem;
-    margin-top: 1rem;
-    background: white;
-    border: none;
-    border-radius: 1.4rem;
+  padding: 0.8rem 1rem;
+  margin-top: 1rem;
+  background: white;
+  border: none;
+  border-radius: 1.4rem;
+  cursor: pointer;
 }
 
 /* Media Query */
 @media screen and (min-width: 1024px) {
-    .homepage_title {
-        font-size: 2.4rem;
-    }
+  .homepage_title {
+    font-size: 2.4rem;
+  }
 
-    .homepage_button {
-        font-size: 1.6rem;
-        margin-top: 2rem;
-    }
+  .homepage_button {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
 
-    .homepage_title_button {
-        margin-bottom: 16rem;
-        text-align: center;
-    }
+  .homepage_title_button {
+    margin-bottom: 16rem;
+    text-align: center;
+  }
 }

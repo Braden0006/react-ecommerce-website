@@ -61,6 +61,7 @@
   padding: 0.8rem 1rem;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 .viewcart_increment,
@@ -69,6 +70,7 @@
   padding: 0.8rem 1rem;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 .remove-item_btn {
@@ -76,6 +78,7 @@
   padding: 0.8rem 1rem;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 /* Media Querys */
