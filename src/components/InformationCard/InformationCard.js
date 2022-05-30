@@ -7,6 +7,7 @@ import { WiHumidity } from "react-icons/wi";
 import { GiHealingShield } from "react-icons/gi";
 
 import "./InformationCard.css";
+import { useMediaQuery } from "@mui/material";
 
 export default function InformationCard() {
   const { ref, inView } = useInView({
@@ -16,8 +17,10 @@ export default function InformationCard() {
   const rightAnimation = useAnimation();
   const fade = useAnimation();
 
+  const isLarge = useMediaQuery('(min-width: 1024px)')
+
   useEffect(() => {
-    if (inView) {
+    if (inView && isLarge) {
       leftAnimation.start({
         x: 0,
         transition: {
@@ -42,7 +45,7 @@ export default function InformationCard() {
       })
     }
 
-    if (!inView) {
+    if (!inView && isLarge) {
       leftAnimation.start({
         x: "-100vw",
       });
@@ -58,7 +61,7 @@ export default function InformationCard() {
         }
       })
     }
-  }, [leftAnimation, rightAnimation, fade, inView]);
+  }, [leftAnimation, rightAnimation, fade, isLarge, inView]);
 
   return (
     <>
