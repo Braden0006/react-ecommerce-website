@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
+
 import "./Navbar.css";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+
+  const breakpoint = useMediaQuery('(max-width: 768px)');
 
   // Sets the "showMenu" value to toggle between true and false
   const menu = () => {
     setShowMenu(!showMenu);
   };
 
-  if (showMenu) {
+  if (showMenu && breakpoint) {
     document.body.style.overflowY = 'hidden'
   } else {
     document.body.style.overflowY = 'scroll'
