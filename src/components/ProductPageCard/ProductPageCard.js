@@ -1,8 +1,10 @@
 import React, { useState, useContext } from "react";
+
 import AddedToCart from "../AddedToCart/AddedToCart";
 import { CartContext } from "../../context/CartContext";
 import { useCart } from "react-use-cart";
 import { motion } from "framer-motion";
+
 import "./ProductPageCard.css";
 
 export default function ProductPageCard() {
@@ -45,34 +47,36 @@ export default function ProductPageCard() {
     <>
       <AddedToCart open={isOpen} onClose={() => setIsOpen(false)} />
 
-      {plants.map((plant) => (
-        <div className="productcard-container" key={plant.id}>
-          <div className="product_title_container">
-            <span>{plant.name}</span>
+      <div className="productcard__container">
+        {plants.map((plant) => (
+          <div className="productcard__container-container" key={plant.id}>
+            <div className="product_title_container">
+              <span>{plant.name}</span>
+            </div>
+            <div
+              className={`productcard_img_container ${
+                plant.name === "Jade Plant" ? "jade_plant" : "aloe_vera"
+              }`}
+            ></div>
+            <div className="productcard_info_container">
+              <p className="productcard_info">{plant.description}</p>
+            </div>
+            <motion.button
+              className="productcard_button"
+              // When the button is clicked, it increments the number next to then cart icon
+              onClick={() => {
+                setAddPlant(addPlant + 1);
+                setIsOpen(true);
+                addItem(plant);
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Add to cart
+            </motion.button>
           </div>
-          <div
-            className={`productcard_img_container ${
-              plant.name === "Jade Plant" ? "jade_plant" : "aloe_vera"
-            }`}
-          ></div>
-          <div className="productcard_info_container">
-            <p className="productcard_info">{plant.description}</p>
-          </div>
-          <motion.button
-            className="productcard_button"
-            // When the button is clicked, it increments the number next to then cart icon
-            onClick={() => {
-              setAddPlant(addPlant + 1);
-              setIsOpen(true);
-              addItem(plant);
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Add to cart
-          </motion.button>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 }
