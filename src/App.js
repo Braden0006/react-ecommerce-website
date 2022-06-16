@@ -13,6 +13,9 @@ function App() {
   const [addPlant, setAddPlant] = useState(0);
 
   return (
+
+    
+
     <>
       <CartProvider>
         <Routes>

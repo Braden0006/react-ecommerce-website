@@ -14,6 +14,12 @@ export default function Navbar() {
     setShowMenu(!showMenu);
   };
 
+  if (showMenu) {
+    document.body.style.overflowY = 'hidden'
+  } else {
+    document.body.style.overflowY = 'scroll'
+  }
+
   // Checks to see if theres an item added to the cart and rather or not to display the number, so if there's nothing added it doesn't display anything next to the cart icon
   const isNumberShown = () => {
     return totalUniqueItems === 0 ? "hidden" : null;
