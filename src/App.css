@@ -7,6 +7,19 @@ html {
 }
 
 .homepage {
-  background-image: url('./images/pexels-julia-sakelli-1011302.webp');
+  /* background-image: url('./images/pexels-julia-sakelli-1011302.webp'); */
   background-size: cover;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .homepage {
+    background-image: url('./images/pexels-julia-sakelli-1011302_ygd29l_c_scale\,w_830.webp');
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .homepage {
+    background-image: url('./images/pexels-julia-sakelli-1011302_ygd29l_c_scale\,w_1400.webp');
+  }
 }
