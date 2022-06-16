@@ -18,7 +18,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
   .homepage {
     background-image: url('./images/pexels-julia-sakelli-1011302_ygd29l_c_scale\,w_1400.webp');
   }
