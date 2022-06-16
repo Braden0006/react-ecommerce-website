@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-ecommerce-website/static/css/main.d8707576.css",
-    "main.js": "/react-ecommerce-website/static/js/main.87ab5faf.js",
+    "main.js": "/react-ecommerce-website/static/js/main.9ce02779.js",
     "static/media/pexels-julia-sakelli-1011302.jpg": "/react-ecommerce-website/static/media/pexels-julia-sakelli-1011302.ce8e76a52f97b2864688.jpg",
     "static/media/large-jade-plant.jpg": "/react-ecommerce-website/static/media/large-jade-plant.c3d139a71b97fe1ea1c8.jpg",
     "static/media/large-aloevera.jpg": "/react-ecommerce-website/static/media/large-aloevera.2d863bfa4d33299679c6.jpg",
     "index.html": "/react-ecommerce-website/index.html",
     "main.d8707576.css.map": "/react-ecommerce-website/static/css/main.d8707576.css.map",
-    "main.87ab5faf.js.map": "/react-ecommerce-website/static/js/main.87ab5faf.js.map"
+    "main.9ce02779.js.map": "/react-ecommerce-website/static/js/main.9ce02779.js.map"
   },
   "entrypoints": [
     "static/css/main.d8707576.css",
-    "static/js/main.87ab5faf.js"
+    "static/js/main.9ce02779.js"
   ]
 }
